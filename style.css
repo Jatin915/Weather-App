@@ -17,8 +17,8 @@ body{
     height: 50vh;
     width: auto;
     background:rgba(255, 255, 255, 0.4);
-    padding: 50px 50px 105px 50px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 50px 50px 108px 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     text-align: center;
     display: flex;
@@ -26,28 +26,7 @@ body{
     align-items: center;
     /* padding-bottom: 90px; */
 }
-
-/* .date{
-    width: 100%;
-    background-color: #fff;
-    text-align: center;
-    p{
-        font-size: 30px;
-        font-weight: 900;
-    }
-    }
-    
-    .time{
-        width: 100%;
-        background-color: #fff;
-        text-align: center;
-        p{
-            font-size: 30px;
-            font-weight: 900;
-            }
-            } */
-            
-            
+     
 p{
     font-size: 30px;
     font-weight: 900;
@@ -81,10 +60,15 @@ button{
     height: 2.5rem;
     width: 5.5rem;
     border: none;
-    background-color: rgb(121, 159, 242);
+    background-color: rgb(116, 155, 241);
     color: white;
     border-radius: 7.7px;
     margin-top: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(56, 101, 198);
 }
 
 #city{
@@ -103,7 +87,7 @@ button{
 }
 
 #humidity{
-    margin-top: 5px;
+    margin-top: 8px;
     font-size: 25px;
     font-weight: lighter;
 }
