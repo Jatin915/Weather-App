@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
         <form action="">
-        <div class="date"></div>
-        <div class="time"></div>
-        <div class="greeting"></div>
-        <input type="text">
+        <p id="date">Tue Jun 10 2025</p>
+        <p id="time">21:06:48</p>
+        <p id="greeting">Good Morning!</p>
+        <input type="text" placeholder="Enter city name">
+        <!-- <br> -->
         <button>Search</button>
-        <div class="city"></div>
-        <div class="temperature"></div>
-        <div class="humidity"></div>
+        <p id="city">London</p>
+        <p id="temp">32˚C</p>
+        <p id="condition">Clouds</p>
+        <p id="humidity">Humidity: 53%</p>
         </form>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
