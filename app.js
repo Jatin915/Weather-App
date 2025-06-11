@@ -34,14 +34,19 @@ document.querySelector("button").addEventListener("click", async (evt) => {
     evt.preventDefault();
     let city=cityInput.value;
     console.log("getting temprature...");
-    let data=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-    result=await data.json();
-    document.querySelector("#city").textContent=result.name;
-    document.querySelector("#temp").textContent=`${Math.round(result.main.temp)}˚C`;
-    document.querySelector("#condition").textContent=result.weather[0].main;
-    document.querySelector("#humidity").textContent=`Humidity: ${result.main.humidity}%`;
-    changeBG(result.weather[0].main);
-    console.log(result);
+    try{
+        let data=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+        result=await data.json();
+        document.querySelector("#city").textContent=result.name;
+        document.querySelector("#temp").textContent=`${Math.round(result.main.temp)}˚C`;
+        document.querySelector("#condition").textContent=result.weather[0].main;
+        document.querySelector("#humidity").textContent=`Humidity: ${result.main.humidity}%`;
+        changeBG(result.weather[0].main);
+        console.log(result);
+    }
+    catch{
+        alert("City not found!");
+    }
 });
 
 function changeBG(weather){
