@@ -33,7 +33,6 @@ let result; let bg;
 document.querySelector("button").addEventListener("click", async (evt) => {
     evt.preventDefault();
     let city=cityInput.value;
-    // console.log(cityInput)
     console.log("getting temprature...");
     let data=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
     result=await data.json();
